@@ -11,9 +11,15 @@ $clouds: #ecf0f1;
 $emerland: #2ecc71;
 $midnight-blue: #2c3e50;
 $nephritis: #27ae60;
+$orange: #f39c12;
 $peter-river: #3498db;
 $pomegrenade: #c0392b;
 $wet-asphalt: #34495e;
+
+$h-min-mini: 460px;
+$h-min-small: 769px;
+$h-min-medium: 880px;
+$h-min-large: 1140px;
 
 * { @include box-sizing(border-box);  }
 
@@ -28,79 +34,122 @@ p {
 body {
   background-color: $clouds;
 
-  header {
+  > header {
+    background-color: $midnight-blue;
+    height: 36rem;
+    margin-bottom: 15rem;
+    overflow: visible;
+    
     div {
-      background-color: $midnight-blue;
-      height: 18rem;
+      background-color: $orange;
+      height: 40rem;
+      margin: 0 auto;
+      position: relative;
+      top: 7rem;
       width: 100%;
+    }
+    
+    @media ( min-width: $h-min-small ) { padding: 0 3rem; }
+    @media ( min-width: $h-min-large ) {
+      div { max-width: 124rem; }
     }
   }
   
-  #main {
-    padding: 3rem 1rem;
+  #wrapper {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
     
-    .note,
-    .story,
-    .weekly {
-      @include clearfix();
-    
-      margin: 0 auto 3rem;
+    #main {
+      float: left;
       width: 100%;
       
-      aside, .main { float: left; }
+      .note,
+      .story,
+      .weekly {
+        @include clearfix();
       
-      .main {
-        width: 100%;
-      }
-      
-      aside {
-        background: $wet-asphalt;
-        display: none;
-        height: 9rem;
-        margin-right: 3rem;
-        width: 9rem;
-      }
-      
-      @media ( min-width: 720px ) { width: 70rem; }
-      @media ( min-width: 840px ) {
-        aside { display: block; }
-        .main { width: 70rem;}
-        width: 82rem;
-      }
-    }
-    
-    .note {
-      header {
-        background-color: $nephritis;
-        height: 9rem;
-        padding: 1rem;
-      }
-      
-      article {
-        padding: 0 1rem;
+        margin: 0 auto 3rem;
         width: 100%;
         
-        > div {
-          background-color: $emerland;
-          height: 9rem;
-          padding: 1rem;
+        aside, .main { float: left; }
+        
+        .main {
           width: 100%;
         }
+        
+        aside {
+          background: $wet-asphalt;
+          display: none;
+          height: 9rem;
+          margin-right: 3rem;
+          width: 9rem;
+        }
       }
-    }
-    
-    .weekly {
-      .main {
-        background-color: $peter-river;
-        height: 40rem;
+      
+      @media ( min-width: $h-min-medium ) {
+        width: 82rem;
+        
+        .note,
+        .story,
+        .weekly {
+          aside { display: block; }
+          .main { width: 70rem;}
+        }
+      }
+      
+      .note {
+        header {
+          background-color: $nephritis;
+          height: 45rem;
+          padding: 1rem;
+        }
+        
+        article {
+          padding: 0 1rem;
+          width: 100%;
+          
+          > div {
+            background-color: $emerland;
+            height: 30rem;
+            padding: 1rem;
+            width: 100%;
+          }
+        }
+      }
+      
+      .weekly {
+        .main {
+          background-color: $peter-river;
+          height: 70rem;
+          padding: 1rem;
+        }
+      }
+      
+      .story {
+        background-color: $pomegrenade;
+        height: 45rem;
         padding: 1rem;
       }
     }
     
-    .story {
-      background-color: $pomegrenade;
-      height: 9rem;
-      padding: 1rem;
+    > aside {
+      background: $midnight-blue;
+      display: none;
+      height: 27rem;
+      float: left;
+      margin-left: 6rem;
+      width: 20rem;
+      
+      @media ( min-width: $h-min-large ) { display: block; }
     }
+    
+    @media ( min-width: $h-min-mini ) { padding: 1rem 3rem; }
+    @media ( min-width: $h-min-small ) {
+      padding: 3rem;
+      width: 74rem;
+    }
+    @media ( min-width: $h-min-medium ) { width: 86rem; }
+    @media ( min-width: $h-min-large ) { width: 114rem; }
   }
 }
