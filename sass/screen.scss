@@ -90,9 +90,11 @@ body {
     }
     
     .weekly {
-      background-color: $peter-river;
-      height: 40rem;
-      padding: 1rem;
+      .main {
+        background-color: $peter-river;
+        height: 40rem;
+        padding: 1rem;
+      }
     }
     
     .story {

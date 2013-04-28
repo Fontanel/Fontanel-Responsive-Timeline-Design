@@ -179,13 +179,13 @@ body #main .note article > div {
   padding: 1rem;
   width: 100%;
 }
-/* line 92, ../sass/screen.scss */
-body #main .weekly {
+/* line 93, ../sass/screen.scss */
+body #main .weekly .main {
   background-color: #3498db;
   height: 40rem;
   padding: 1rem;
 }
-/* line 98, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 body #main .story {
   background-color: #c0392b;
   height: 9rem;
