@@ -6,21 +6,28 @@
 @import "compass/css3";
 @import "compass/reset";
 
-$clouds: #2c3e50;
+$clouds: #ecf0f1;
 $emerland: #2ecc71;
-$midnight-blue: #ecf0f1;
+$midnight-blue: #2c3e50;
 $nephritis: #27ae60;
+$peter-river: #3498db;
+$pomegrenade: #c0392b;
 
 * {
   @include box-sizing(border-box); 
 }
 
+p {
+  color: $midnight-blue;
+  font-family: "Arial";
+}
+
 body {
-  background-color: $midnight-blue;
+  background-color: $clouds;
 
   header {
     div {
-      background-color: $clouds;
+      background-color: $midnight-blue;
       height: 200px;
       width: 100%;
     }
@@ -29,10 +36,17 @@ body {
   #main {
     padding: 10px;
     
+    .note,
+    .story,
+    .weekly {
+      margin-bottom: 50px;
+    }
+    
     .note {
       header {
         background-color: $nephritis;
         height: 100px;
+        padding: 10px;
         width: 100%;
       }
       
@@ -43,9 +57,24 @@ body {
         > div {
           background-color: $emerland;
           height: 100px;
+          padding: 10px;
           width: 100%;
         }
       }
+    }
+    
+    .story {
+      background-color: $pomegrenade;
+      height: 100px;
+      padding: 10px;
+      width: 100%;
+    }
+    
+    .weekly {
+      background-color: $peter-river;
+      height: 400px;
+      padding: 10px;
+      width: 100%;
     }
   }
 }
