@@ -3,4 +3,49 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+@import "compass/css3";
 @import "compass/reset";
+
+$clouds: #2c3e50;
+$emerland: #2ecc71;
+$midnight-blue: #ecf0f1;
+$nephritis: #27ae60;
+
+* {
+  @include box-sizing(border-box); 
+}
+
+body {
+  background-color: $midnight-blue;
+
+  header {
+    div {
+      background-color: $clouds;
+      height: 200px;
+      width: 100%;
+    }
+  }
+  
+  #main {
+    padding: 10px;
+    
+    .note {
+      header {
+        background-color: $nephritis;
+        height: 100px;
+        width: 100%;
+      }
+      
+      article {
+        padding: 0 10px;
+        width: 100%;
+        
+        > div {
+          background-color: $emerland;
+          height: 100px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
