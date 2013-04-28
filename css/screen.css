@@ -67,75 +67,127 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 16, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 20, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 p {
   color: #2c3e50;
   font-family: "Arial";
   font-size: 1.6rem;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 body {
   background-color: #ecf0f1;
 }
-/* line 30, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 body header div {
   background-color: #2c3e50;
-  height: 20rem;
+  height: 18rem;
   width: 100%;
 }
-/* line 37, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 body #main {
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
-/* line 42, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 body #main .note,
 body #main .story,
 body #main .weekly {
-  margin-bottom: 5rem;
-}
-/* line 47, ../sass/screen.scss */
-body #main .note header {
-  background-color: #27ae60;
-  height: 10rem;
-  padding: 1rem;
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0 auto 3rem;
   width: 100%;
 }
-/* line 54, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
+body #main .note aside, body #main .note .main,
+body #main .story aside,
+body #main .story .main,
+body #main .weekly aside,
+body #main .weekly .main {
+  float: left;
+}
+/* line 52, ../sass/screen.scss */
+body #main .note .main,
+body #main .story .main,
+body #main .weekly .main {
+  width: 100%;
+}
+/* line 56, ../sass/screen.scss */
+body #main .note aside,
+body #main .story aside,
+body #main .weekly aside {
+  background: #34495e;
+  display: none;
+  height: 9rem;
+  margin-right: 3rem;
+  width: 9rem;
+}
+@media (min-width: 720px) {
+  /* line 44, ../sass/screen.scss */
+  body #main .note,
+  body #main .story,
+  body #main .weekly {
+    width: 70rem;
+  }
+}
+@media (min-width: 840px) {
+  /* line 44, ../sass/screen.scss */
+  body #main .note,
+  body #main .story,
+  body #main .weekly {
+    width: 82rem;
+  }
+  /* line 66, ../sass/screen.scss */
+  body #main .note aside,
+  body #main .story aside,
+  body #main .weekly aside {
+    display: block;
+  }
+  /* line 67, ../sass/screen.scss */
+  body #main .note .main,
+  body #main .story .main,
+  body #main .weekly .main {
+    width: 70rem;
+  }
+}
+/* line 73, ../sass/screen.scss */
+body #main .note header {
+  background-color: #27ae60;
+  height: 9rem;
+  padding: 1rem;
+}
+/* line 79, ../sass/screen.scss */
 body #main .note article {
   padding: 0 1rem;
   width: 100%;
 }
-/* line 58, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 body #main .note article > div {
   background-color: #2ecc71;
-  height: 10rem;
+  height: 9rem;
   padding: 1rem;
   width: 100%;
 }
-/* line 67, ../sass/screen.scss */
-body #main .story {
-  background-color: #c0392b;
-  height: 10rem;
-  padding: 1rem;
-  width: 100%;
-}
-/* line 74, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 body #main .weekly {
   background-color: #3498db;
   height: 40rem;
   padding: 1rem;
-  width: 100%;
+}
+/* line 98, ../sass/screen.scss */
+body #main .story {
+  background-color: #c0392b;
+  height: 9rem;
+  padding: 1rem;
 }

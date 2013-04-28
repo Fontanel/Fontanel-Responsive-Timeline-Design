@@ -5,6 +5,7 @@
 
 @import "compass/css3";
 @import "compass/reset";
+@import "compass/utilities/general/clearfix";
 
 $clouds: #ecf0f1;
 $emerland: #2ecc71;
@@ -12,6 +13,7 @@ $midnight-blue: #2c3e50;
 $nephritis: #27ae60;
 $peter-river: #3498db;
 $pomegrenade: #c0392b;
+$wet-asphalt: #34495e;
 
 * { @include box-sizing(border-box);  }
 
@@ -29,26 +31,49 @@ body {
   header {
     div {
       background-color: $midnight-blue;
-      height: 20rem;
+      height: 18rem;
       width: 100%;
     }
   }
   
   #main {
-    padding: 1rem;
+    padding: 3rem 1rem;
     
     .note,
     .story,
     .weekly {
-      margin-bottom: 5rem;
+      @include clearfix();
+    
+      margin: 0 auto 3rem;
+      width: 100%;
+      
+      aside, .main { float: left; }
+      
+      .main {
+        width: 100%;
+      }
+      
+      aside {
+        background: $wet-asphalt;
+        display: none;
+        height: 9rem;
+        margin-right: 3rem;
+        width: 9rem;
+      }
+      
+      @media ( min-width: 720px ) { width: 70rem; }
+      @media ( min-width: 840px ) {
+        aside { display: block; }
+        .main { width: 70rem;}
+        width: 82rem;
+      }
     }
     
     .note {
       header {
         background-color: $nephritis;
-        height: 10rem;
+        height: 9rem;
         padding: 1rem;
-        width: 100%;
       }
       
       article {
@@ -57,25 +82,23 @@ body {
         
         > div {
           background-color: $emerland;
-          height: 10rem;
+          height: 9rem;
           padding: 1rem;
           width: 100%;
         }
       }
     }
     
-    .story {
-      background-color: $pomegrenade;
-      height: 10rem;
-      padding: 1rem;
-      width: 100%;
-    }
-    
     .weekly {
       background-color: $peter-river;
       height: 40rem;
       padding: 1rem;
-      width: 100%;
+    }
+    
+    .story {
+      background-color: $pomegrenade;
+      height: 9rem;
+      padding: 1rem;
     }
   }
 }
