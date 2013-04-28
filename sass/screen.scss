@@ -13,13 +13,14 @@ $nephritis: #27ae60;
 $peter-river: #3498db;
 $pomegrenade: #c0392b;
 
-* {
-  @include box-sizing(border-box); 
-}
+* { @include box-sizing(border-box);  }
+
+html { font-size: 62.5%; }
 
 p {
   color: $midnight-blue;
   font-family: "Arial";
+  font-size: 1.6rem;
 }
 
 body {
@@ -28,36 +29,36 @@ body {
   header {
     div {
       background-color: $midnight-blue;
-      height: 200px;
+      height: 20rem;
       width: 100%;
     }
   }
   
   #main {
-    padding: 10px;
+    padding: 1rem;
     
     .note,
     .story,
     .weekly {
-      margin-bottom: 50px;
+      margin-bottom: 5rem;
     }
     
     .note {
       header {
         background-color: $nephritis;
-        height: 100px;
-        padding: 10px;
+        height: 10rem;
+        padding: 1rem;
         width: 100%;
       }
       
       article {
-        padding: 0 10px;
+        padding: 0 1rem;
         width: 100%;
         
         > div {
           background-color: $emerland;
-          height: 100px;
-          padding: 10px;
+          height: 10rem;
+          padding: 1rem;
           width: 100%;
         }
       }
@@ -65,15 +66,15 @@ body {
     
     .story {
       background-color: $pomegrenade;
-      height: 100px;
-      padding: 10px;
+      height: 10rem;
+      padding: 1rem;
       width: 100%;
     }
     
     .weekly {
       background-color: $peter-river;
-      height: 400px;
-      padding: 10px;
+      height: 40rem;
+      padding: 1rem;
       width: 100%;
     }
   }
