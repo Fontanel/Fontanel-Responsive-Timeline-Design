@@ -99,10 +99,15 @@ body > header {
 }
 /* line 46, ../sass/screen.scss */
 body > header div {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
   background-color: #f39c12;
+  background-position: center center;
   height: 40rem;
   margin: 0 auto;
   position: relative;
@@ -116,23 +121,23 @@ body > header div {
   }
 }
 @media (min-width: 1140px) {
-  /* line 59, ../sass/screen.scss */
+  /* line 61, ../sass/screen.scss */
   body > header div {
     max-width: 124rem;
   }
 }
-/* line 63, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 body #wrapper {
   margin: 0 auto;
   padding: 1rem;
   width: 100%;
 }
-/* line 68, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 body #wrapper #main {
   float: left;
   width: 100%;
 }
-/* line 74, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 body #wrapper #main .note,
 body #wrapper #main .story,
 body #wrapper #main .weekly {
@@ -141,7 +146,7 @@ body #wrapper #main .weekly {
   margin: 0 auto 6rem;
   width: 100%;
 }
-/* line 80, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 body #wrapper #main .note aside, body #wrapper #main .note .main,
 body #wrapper #main .story aside,
 body #wrapper #main .story .main,
@@ -149,13 +154,13 @@ body #wrapper #main .weekly aside,
 body #wrapper #main .weekly .main {
   float: left;
 }
-/* line 82, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 body #wrapper #main .note .main,
 body #wrapper #main .story .main,
 body #wrapper #main .weekly .main {
   width: 100%;
 }
-/* line 86, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 body #wrapper #main .note aside,
 body #wrapper #main .story aside,
 body #wrapper #main .weekly aside {
@@ -169,24 +174,24 @@ body #wrapper #main .weekly aside {
   width: 9rem;
 }
 @media (min-width: 880px) {
-  /* line 68, ../sass/screen.scss */
+  /* line 70, ../sass/screen.scss */
   body #wrapper #main {
     width: 82rem;
   }
-  /* line 103, ../sass/screen.scss */
+  /* line 105, ../sass/screen.scss */
   body #wrapper #main .note aside,
   body #wrapper #main .story aside,
   body #wrapper #main .weekly aside {
     display: block;
   }
-  /* line 104, ../sass/screen.scss */
+  /* line 106, ../sass/screen.scss */
   body #wrapper #main .note .main,
   body #wrapper #main .story .main,
   body #wrapper #main .weekly .main {
     width: 70rem;
   }
 }
-/* line 109, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 body #wrapper #main .note header {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
@@ -195,12 +200,12 @@ body #wrapper #main .note header {
   height: 45rem;
   padding: 1rem;
 }
-/* line 117, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 body #wrapper #main .note article {
   padding: 0 1rem 1rem;
   width: 100%;
 }
-/* line 121, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 body #wrapper #main .note article > div {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
@@ -210,7 +215,7 @@ body #wrapper #main .note article > div {
   padding: 1rem;
   width: 100%;
 }
-/* line 133, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 body #wrapper #main .weekly .main {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
@@ -219,7 +224,7 @@ body #wrapper #main .weekly .main {
   height: 70rem;
   padding: 1rem;
 }
-/* line 142, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 body #wrapper #main .story {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -232,21 +237,21 @@ body #wrapper #main .story {
   height: 45rem;
   padding: 1rem;
 }
-/* line 152, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 body #wrapper > aside {
   display: none;
   float: left;
   margin-left: 6rem;
   width: 20rem;
 }
-/* line 158, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 body #wrapper > aside.stick {
   float: none;
   margin-left: 880px;
   position: fixed;
   top: 3rem;
 }
-/* line 165, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 body #wrapper > aside div {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0.1rem 0.4rem;
@@ -257,38 +262,38 @@ body #wrapper > aside div {
   width: 100%;
 }
 @media (min-width: 1140px) {
-  /* line 152, ../sass/screen.scss */
+  /* line 154, ../sass/screen.scss */
   body #wrapper > aside {
     display: block;
   }
 }
 @media (min-width: 460px) {
-  /* line 63, ../sass/screen.scss */
+  /* line 65, ../sass/screen.scss */
   body #wrapper {
     padding: 1rem 3rem;
   }
 }
 @media (min-width: 769px) {
-  /* line 63, ../sass/screen.scss */
+  /* line 65, ../sass/screen.scss */
   body #wrapper {
     padding: 0 3rem;
     width: 74rem;
   }
 }
 @media (min-width: 880px) {
-  /* line 63, ../sass/screen.scss */
+  /* line 65, ../sass/screen.scss */
   body #wrapper {
     width: 86rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 63, ../sass/screen.scss */
+  /* line 65, ../sass/screen.scss */
   body #wrapper {
     width: 114rem;
   }
 }
 
-/* line 187, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #logo {
   left: 3rem;
   position: absolute;

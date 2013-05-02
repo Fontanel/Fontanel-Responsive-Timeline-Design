@@ -44,9 +44,11 @@ body {
     overflow: visible;
     
     div {
+      @include background-size( cover );
       @include box-shadow( $default-shadow );
       
       background-color: $orange;
+      background-position: center center;
       height: 40rem;
       margin: 0 auto;
       position: relative;
